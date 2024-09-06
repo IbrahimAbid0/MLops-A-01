@@ -1,0 +1,25 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # Replace if you don't have a requirements.txt
+
+      # Build your project if necessary (e.g., if you have a build script)
+      # - name: Build
+      #   run: <your_build_command>  # Replace with your specific build command
+
+      - name: Deploy to Vercel
+        uses: vercel/actions@v1.4.1
+        with:
+          vercel-token: <1Fhnyl8VtORySFSXueq8kNyS>
+          vercel-args: |
+            --prod   # Optional: Deploy to production
