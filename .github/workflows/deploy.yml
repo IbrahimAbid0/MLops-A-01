@@ -18,7 +18,7 @@ jobs:
       #   run: <your_build_command>  # Replace with your specific build command
 
       - name: Deploy to Vercel
-        uses: vercel/actions@v1.4.1
+        uses: vercel/actions@v2
         with:
           vercel-token: 1Fhnyl8VtORySFSXueq8kNyS
           vercel-args: |
